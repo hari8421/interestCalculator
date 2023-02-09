@@ -10,7 +10,7 @@ Body {
   background-color: white;  
 }  
 button {   
-       background-color: #4CAF50;   
+       background-color: #c2e6c4;   
        width: 100%;  
         color: orange;   
         padding: 15px;   
@@ -21,17 +21,40 @@ button {
  form {   
         border: 3px solid #f1f1f1;   
     }   
- input[type=text], input[type=password] {   
-        width: 100%;   
-        margin: 8px 0;  
-        padding: 12px 20px;   
-        display: inline-block;   
-        border: 2px solid green;   
-        box-sizing: border-box;   
-    }  
- button:hover {   
-        opacity: 0.7;   
-    } .buttons {
+ input[type=text], input[type=password],input[type=email]{
+    width: 20%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #e5e9e5;
+    box-sizing: border-box;
+}
+ select{
+    width: 10%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #e5e9e5;
+    box-sizing: border-box;
+}
+ textarea{
+    width: 40%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #e5e9e5;
+    box-sizing: border-box;
+}
+ input[type=date] {
+    width: 10%;
+    margin: 8px 0;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 2px solid #e5e9e5;
+    box-sizing: border-box;
+}
+ button:
+ .buttons {
 width: 200px;
 margin: 0 auto;
 display: inline;}
@@ -53,26 +76,55 @@ display: inline;}
     }   
 </style>   
 </HEAD>
-<BODY background="image.jpg">
+<BODY background="image.jpg" onload="onLoadPage()">
 <div style:"align:center">
 <center><h1>Registration Form</h1></center>
 </div>
 <div class="container">
-<label>User name</label>
-<input type="text" placeholder="Username" id="userName">
-<label>Email ID</label>
-<input type="text" placeholder="Email" id="email">
-<label>Mobile Number</label>
-<input type="text" placeholder="Mobile" id="mobile">
-<label>Password</label>
-<input type="password" placeholder="Password" id="pass">
+<div>
+<input type="text" placeholder="First Name" id="firstName" onChange="checkMandatory()">
+<input type="text" placeholder="Last Name" id="lastName" onChange="checkMandatory()">
+</div>
+<br><br>
+<div>
+<label>DOB: </label>
+<input type="date" id="dob">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;
+<label>Gender: </label>
+<select name="gender" id="gender" onChange="checkMandatory()">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+
+</select>
+</div>
+<div>
+<input type="email" placeholder="Email" id="email" onChange="checkMandatory()" required>
+<input type="text" placeholder="Mobile"  id="mobile" onChange="checkMandatory()">
+</div>
+<textarea id="add" placeholder="address" name="add" rows="4" cols="50">
+Address
+</textarea>
+<div>
+<input type="text" placeholder="Password" id="password" onChange="checkMandatory()">
+<input type="text" placeholder="Confirm password" id="cpass" onChange="checkMandatory()">
+</div>
+<p>Account Type:</p>
+  <input type="radio" id="html" name="ragular" value="HTML">
+  <label for="html">Regular</label><br>
+  <input type="radio" id="premium" value="premium">
+  <label for="premium">Premium</label><br>
+
+<br>
+<label for="confirm"> All the above mentioned informations are correct </label>
+<input type="checkbox" id="confirm" value="true"><br>
+
 <center>
 <div class="buttons">
 
             <div class="action_btn">
 
-            <button name="submit" class="action_btn submit" type="submit" value="Save" onclick="register()">Register</button>
-            <button name="cancel" class="action_btn cancel" type="submit" value="Cancel" onclick="cancel()">Cancel</button>
+            <button id="submit" class="action_btn submit" type="submit" value="Save" onclick="register()">Register</button>
+            <button id="cancel" class="action_btn cancel" type="submit" value="Cancel" onclick="cancel()">Cancel</button>
 
             <p id="saved"></p>
 

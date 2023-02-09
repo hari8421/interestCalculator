@@ -1,0 +1,166 @@
+<HTML>
+<HEAD>
+ <script src="login.js"></script>
+<TITLE>
+User Profile
+</TITLE>
+<style>   
+Body {  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background-color: white;  
+}  
+button {   
+       background-color: #c4dec5;   
+       width: 100%;  
+        color: orange;   
+        padding: 15px;   
+        margin: 10px 0px;   
+        border: none;   
+        cursor: pointer;   
+         }   
+ form {   
+        border: 3px solid #f1f1f1;   
+    }   
+ input[type=text], input[type=password] {   
+        width: 100%;   
+        margin: 8px 0;  
+        padding: 12px 20px;   
+        display: inline-block;   
+        border: 2px solid green;   
+        box-sizing: border-box;   
+    }  
+ button:hover {   
+        opacity: 0.7;   
+    } .buttons {
+width: 200px;
+margin: 0 auto;
+display: inline;}
+
+    .action_btn {
+width: 200px;
+margin: 0 auto;
+display: inline;}  
+  .cancelbtn {   
+        width: auto;   
+        padding: 10px 18px;  
+        margin: 10px 5px;  
+    }   
+        
+     
+ .container {   
+        padding: 17px;   
+        background-color: white;  
+    } 
+.first{
+     width:70%;
+     height:300px;
+     position:absolute;
+     border:1px solid red;
+ }
+.second{
+    border:2px solid blue;
+    width:40%;
+    height:200px;
+	position: relative;
+    top: 315px;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+.column3 {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 80%;
+  padding: 10px;
+  height: 100px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+img {
+  border-radius: 50%;
+}
+body {
+        background-color: #0a538e;
+      }
+	
+</style>   
+</HEAD>
+<BODY >
+<div style:"align:center">
+<center><h3>User Profile</h3></center>
+</div>
+<div class="container">
+<div class="row">
+  <div class="column" style="background-color:#f1ecec;">
+    <h3>Name</h3>
+    <p>Harikrishnan Rajan</p>
+  </div>
+  <div class="column" style="background-color:#f1ecec;">
+    <h3>Gender</h3>
+    <p>Male</p>
+  </div>
+  <div class="column" style="background-color:#f1ecec;">
+    <h3>DOB</h3>
+    <p>09/07/1995</p>
+  </div>
+   <div class="column" style="background-color:#f1ecec;">
+    <h3>Email</h3>
+    <p>abc@gmail.com</p>
+  </div>
+   <div class="column" style="background-color:#f1ecec;">
+    <img src="av.jpg" alt="Avatar">
+  </div>
+  <div class="column3" style="background-color:#f1ecec;">
+    <h3>Mobile</h3>
+    <p>0000000000</p>
+  </div>
+  <div class="column2" style="background-color:#f1ecec;">
+    <h3>Address</h3>
+    <p>ABC
+	   EFG
+	   HIJ
+	   KLMjasdhjhasdgjasbdjgsakjadwjkdw
+	</p>
+  </div>
+  <div class="column" style="background-color:#f1ecec;">
+    <h3>Indian</h3>
+    <p>Yes</p>
+  </div>
+  <div class="column2" style="background-color:#f1ecec;">
+    <h3>Account Type</h3>
+    <p>Premium
+	</p>
+  </div>
+</div>
+<br><br>
+<center>
+<div class="buttons">
+
+            <div class="action_btn">
+
+            <button name="cancel" class="action_btn submit" type="submit" value="cancel" onclick="cancel()">Save</button>
+           </div>
+
+        </div>
+		</center>
+</div>
+</BODY>
+</HTML>
